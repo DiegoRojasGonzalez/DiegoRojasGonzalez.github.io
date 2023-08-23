@@ -1,0 +1,40 @@
+.project-tittle-color {
+    color: black;
+    background-color: white;
+}
+.tittle-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 700px;
+    font-size: 15px;
+}
+.contact-button {
+    border: 1px solid white;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 120px;
+    transition: background-color 0.3s, border 0.3s, color 0.3s, transform 1.5s ease-in-out; 
+    transform: scale(1); 
+}
+.contact-button:hover {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.container-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 700px;
+    height: 100%;
+    margin-left: 10px;
+}

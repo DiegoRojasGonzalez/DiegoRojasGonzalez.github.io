@@ -1,0 +1,55 @@
+.whoami-tittle-color {
+    color: black;
+    background-color: white;
+}
+.text-enter-animation {
+    margin-left: 5px;
+    animation: fadeInfadeUp 1s ease-in-out infinite alternate;
+}
+.whoami-desc-p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-family: monospace;
+    font-size: 15px;
+    margin-left: 10px;
+}
+.whoami-desc-p a {
+    text-decoration: none;
+    color: inherit;
+}
+.whoami-desc-p a:hover {
+    color: #00ff00;
+}
+.tittle-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 700px;
+    font-size: 15px;
+}
+
+.whoami-content{
+    display: flex;
+    flex-direction: column;
+    align-items: star;
+    justify-content: center;
+    width: 700px;
+    margin-left: 10px;
+    
+}
+.experience-section, .education-section, .certification-section {
+    margin-bottom: 10px;
+}
+
+.education-item{
+    display: block;
+    margin-bottom: 10px;
+}
+
+.whoami-desc-item {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-family: monospace;
+    font-size: 15px;
+    margin-left: 30px;
+}

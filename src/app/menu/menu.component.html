@@ -1,0 +1,25 @@
+<div class="container-menu">
+    <div class="container-menu-list">
+        <label class="menu-label-head">
+            <label class="menu-label-color-green">diegorojas@diegorojas</label>:<label class="menu-label-color-blue">~</label>$ /home/diegorojas/code/menu.py
+        </label>
+        <label id="menu-item-1" class="menu-label" [class.selected]="isMenuItemSelected(1)" (click)="onMenuItemClick(1)">1.Who am I ?</label>
+        <label id="menu-item-2" class="menu-label" [class.selected]="isMenuItemSelected(2)" (click)="onMenuItemClick(2)">2.Skills</label>
+        <label id="menu-item-2" class="menu-label" [class.selected]="isMenuItemSelected(3)" (click)="onMenuItemClick(3)">3.Projects</label>
+        <label id="menu-item-3" class="menu-label" [class.selected]="isMenuItemSelected(4)" (click)="onMenuItemClick(4)">4.Contact</label>
+        <label id="menu-item-4" class="menu-label" [class.selected]="isMenuItemSelected(5)" (click)="onMenuItemClick(5)">5.Exit</label>
+    </div>
+    <img [src]="selectedImage" class="menu-acci-visualer">
+</div>
+<label class="perfil-name">Diego Ignacio Rojas González</label>
+<label class="perfil-name">Software developer</label>
+<article class="layout-container">
+    <div class="perfil-container-img">
+        <img class="perfil-profile-ascci" src="../../assets/ascii-perfil.jpg" alt="ascii-perfil">
+        <img class="perfil-profile" src="../../assets/perfil.jpg" alt="normal-perfil">
+    </div>
+    <app-whoami *ngIf="isMenuItemSelected(1)"></app-whoami>
+    <app-skills *ngIf="isMenuItemSelected(2)"></app-skills>
+    <app-projects *ngIf="isMenuItemSelected(3)"></app-projects>
+    <app-contact *ngIf="isMenuItemSelected(4)"></app-contact>
+</article>

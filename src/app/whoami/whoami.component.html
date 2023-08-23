@@ -1,0 +1,32 @@
+<label class="tittle-box"><p class="whoami-tittle-color">======= ABOUT ME =======</p></label>
+<div class="whoami-content">
+  <div class="experience-section">
+    <label class="whoami-desc-p experience-item whoami-tittle-color">┬─ EXPERIENCE</label>
+    <ng-container *ngFor="let experience of experienceItems; let isFirst = first; let isLast = last">
+      <p class="whoami-desc-p experience-item">
+        {{ isLast ? '└─' : ' ├─' }} {{ experience.enterprise }}</p>
+      <p class="whoami-desc-item">| {{ experience.position }} | {{ experience.worktype }} | {{experience.date}} | {{experience.contracttype}}</p>
+
+    </ng-container>
+  </div>
+
+  <div class="education-section">
+    <label class="whoami-desc-p experience-item whoami-tittle-color">┬─ EDUCATION</label>
+    <ng-container *ngFor="let education of educationItems; let isFirst = first; let isLast = last">
+      <p class="whoami-desc-p ">
+        {{ isLast ? '└─' : ' ├─' }} {{ education.institution }} 
+        
+      </p>
+      <p class="whoami-desc-item">| {{ education.grade }} | {{ education.date }} | {{ education.status }}</p>
+    </ng-container>
+  </div>
+
+  <div class="certification-section">
+    <label class="whoami-desc-p experience-item whoami-tittle-color">┬─ CERTIFICATIONS</label>
+    <ng-container *ngFor="let certification of certificationItems; let isLast = last">
+      <p class="whoami-desc-p certification-item">
+        {{ isLast ? '└─' : ' ├─' }} <a [href]="certification.link" target="_blank">{{ certification.title }} {{ certification.enterprise }} </a> 
+      </p>
+    </ng-container>
+  </div>
+</div>

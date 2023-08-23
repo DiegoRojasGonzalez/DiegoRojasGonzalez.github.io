@@ -1,0 +1,23 @@
+<app-loader></app-loader>
+
+<section class="container">
+    <div class="terminal-container">
+        <div class="terminal-bar">
+            <img src="../assets/terminal.svg" alt="terminal" class="terminal-icon">
+            <div class="terminal-title">
+                diegorojas@diegorojas:~
+            </div>
+            <div >
+                <button class="terminal-button">?</button>
+                <button class="terminal-button">x</button>
+            </div>
+        </div>
+        <app-menu></app-menu>
+
+    </div>
+</section>
+<div class="terminal-musiccontroller"> 
+<button (click)="buttonClick()" class="soundcontroller">
+    <img class="musiccontroller-button" [src]="isMuted ? '../assets/volumeoff.svg' : '../assets/volumeon.svg'" alt="Volume Icon">
+  </button>
+</div>

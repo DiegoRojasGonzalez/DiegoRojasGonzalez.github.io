@@ -1,0 +1,109 @@
+.container-menu{
+    display: flex;
+    margin-left: 1px;
+    width: 1000px;
+}
+
+.container-menu-list{
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+.menu-acci-visualer{
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    height: 250px;
+    border-right: 1px solid #e0e0e0;
+}
+
+.menu-label-color-green{
+    color: rgb(0, 255, 0);
+}
+
+.menu-label-color-blue{
+    color: rgb(97, 97, 255);
+}
+
+.menu-label-head{
+    display: block;
+    font-size: 14px;
+    line-height: 1.42857143; 
+}
+
+.menu-label { 
+    display: block;
+    font-size: 14px;
+    line-height: 1.42857143;    
+}
+
+.menu-label:hover{
+    background-color: #e0e0e0;
+    cursor: pointer;
+    color: black;
+}
+
+.menu-label[selected] {
+    background-color: #e0e0e0;
+    cursor: pointer;
+    color: black;
+}
+
+.menu-label.selected {
+    background-color: #e0e0e0;
+    cursor: pointer;
+    color: black;
+}
+
+/******/
+
+.perfil-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: monospace;
+    font-size: 15px;
+    margin-bottom:10px;
+}
+
+.perfil-tittle-color{
+    color: black;
+    background-color: white;
+}
+
+.perfil-name{
+    width: 300px;
+
+}
+.perfil-profile,
+.perfil-profile-ascci {
+    width: 300px;
+    height: 300px;
+    transition: opacity 0.5s;
+}
+.perfil-container-img {
+    display: inline-block;
+    position: relative;
+   
+}
+.perfil-profile {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.perfil-container-img:hover .perfil-profile-ascci {
+    opacity: 0;
+}
+.perfil-container-img:hover .perfil-profile {
+    opacity: 1; 
+}
+
+.layout-container {
+    display: flex;
+    width: 100%;
+}
+
+
