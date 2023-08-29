@@ -37,6 +37,18 @@ export class ProjectsComponent implements OnInit {
       githubLink: 'https://github.com/DiegoRojasGonzalez/Focus-Nice',
       applink: '',
     },
+<<<<<<< Updated upstream
+=======
+    {
+      image: 'https://raw.githubusercontent.com/DiegoRojasGonzalez/Resources/main/ss-white-space.png',
+      gif: 'https://raw.githubusercontent.com/DiegoRojasGonzalez/Resources/main/ss-white-space.png',
+      title: 'White Space',
+      description:'White-Space is your go-to solution for comprehensive whitespace removal. This powerful application is purpose-built to eliminate all spaces and line breaks from your text and code. Whether youre cleaning up codebases, preparing content for web publication, or optimizing prompts for chat GPT and other applications',
+      technologies: ['../../assets/skills/javascript.png'],
+      githubLink: 'https://github.com/DiegoRojasGonzalez/White-Space',
+      applink: 'https://diegorojasgonzalez.github.io/White-Space/',
+    }
+>>>>>>> Stashed changes
   ];
   currentElement = 0;
   hoverVideo = false; 
