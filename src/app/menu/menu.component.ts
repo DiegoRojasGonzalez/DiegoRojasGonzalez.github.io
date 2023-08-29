@@ -34,7 +34,7 @@ export class MenuComponent {
 
   private updateSelectedImage() {
     const imageNames = ['material','glass2', 'glass3', 'glass4', 'nebula'];
-    this.selectedImage = this.selectedMenuItem > 0 ? `../../assets/${imageNames[this.selectedMenuItem - 1]}.gif` : '';
+    this.selectedImage = this.selectedMenuItem > 0 ? `https://raw.githubusercontent.com/DiegoRojasGonzalez/Resources/main/DiegoRojasGonzalez.github.io/${imageNames[this.selectedMenuItem - 1]}.gif` : '';
   }
 
   isMenuItemSelected(menuItemNumber: number): boolean {

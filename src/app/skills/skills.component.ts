@@ -12,7 +12,7 @@ export class SkillsComponent implements OnInit {
     'mysql', 'postgresql', 'python', 'react', 'typescript'
   ];
 
-  urlImg = '../../assets/skills/';
+  urlImg = 'https://raw.githubusercontent.com/DiegoRojasGonzalez/Resources/main/DiegoRojasGonzalez.github.io/skills/';
   shuffledSkills: string[] = [];
   currentSkillIndex: number = 0;  
 
