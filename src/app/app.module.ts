@@ -9,6 +9,7 @@ import { WhoamiComponent } from './whoami/whoami.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ContactComponent } from './contact/contact.component';
 import { SkillsComponent } from './skills/skills.component';
+import { ExitComponent } from './exit/exit.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { SkillsComponent } from './skills/skills.component';
     ProjectsComponent,
     ContactComponent,
     SkillsComponent,
+    ExitComponent,
   ],
   imports: [
     BrowserModule,
