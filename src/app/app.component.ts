@@ -18,7 +18,6 @@ export class AppComponent implements OnInit {
     this.tracks.push(new Howl({ src: ['assets/sound/soundflanger.mp3'], loop: true, volume: 0 }));
     this.tracks.push(new Howl({ src: ['assets/sound/soundhighpass.mp3'], loop: true, volume: 0 }));
     this.tracks.push(new Howl({ src: ['assets/sound/soundllowpass.mp3'], loop: true, volume: 0 }));
-    this.tracks.push(new Howl({ src: ['assets/sound/soundreverb.mp3'], loop: true, volume: 0 }));
 
     this.tracks.forEach(track => track.play());
   }

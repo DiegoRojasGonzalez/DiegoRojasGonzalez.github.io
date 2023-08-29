@@ -37,8 +37,6 @@ export class ProjectsComponent implements OnInit {
       githubLink: 'https://github.com/DiegoRojasGonzalez/Focus-Nice',
       applink: '',
     },
-<<<<<<< Updated upstream
-=======
     {
       image: 'https://raw.githubusercontent.com/DiegoRojasGonzalez/Resources/main/ss-white-space.png',
       gif: 'https://raw.githubusercontent.com/DiegoRojasGonzalez/Resources/main/ss-white-space.png',
@@ -48,7 +46,6 @@ export class ProjectsComponent implements OnInit {
       githubLink: 'https://github.com/DiegoRojasGonzalez/White-Space',
       applink: 'https://diegorojasgonzalez.github.io/White-Space/',
     }
->>>>>>> Stashed changes
   ];
   currentElement = 0;
   hoverVideo = false; 
@@ -60,3 +57,4 @@ export class ProjectsComponent implements OnInit {
     this.currentElement = (this.currentElement - 1 + this.elements.length) % this.elements.length;
   }
 }
+
