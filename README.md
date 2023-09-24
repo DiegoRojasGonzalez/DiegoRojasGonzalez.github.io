@@ -14,7 +14,7 @@
 
 ## Description
 
-You can check out my personal portfolio at DiegoRojasGonzalez.github.io, where I showcase the projects I've worked on and add a touch of personality and creativity to present them more effectively   
+You can check out my personal portfolio at [DiegoRojasGonzalez.github.io](https://diegorojasgonzalez.github.io/), where I showcase the projects I've worked on and add a touch of personality and creativity to present them more effectively   
 
 ## Related Documentation
 
