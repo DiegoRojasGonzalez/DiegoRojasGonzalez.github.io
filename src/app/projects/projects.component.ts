@@ -19,6 +19,16 @@ export class ProjectsComponent implements OnInit {
 
 
   elements = [
+    
+    {
+      image: 'https://raw.githubusercontent.com/DiegoRojasGonzalez/Resources/main/DevJobs-Chile/devjobschiless%20(1).png',
+      gif: 'https://raw.githubusercontent.com/DiegoRojasGonzalez/Resources/main/DevJobs-Chile/devjobschiless%20(3).png',
+      title: 'DevJobs-Chile',
+      description:'DevJobs Chile is an online platform that connects IT and software development professionals with companies in search of talent in Chile. Our platform utilizes real-time web scraping techniques to provide job opportunities in various areas, such as programming, web design, data analysis, and more',
+      technologies: ['https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-1024.png','https://th.bing.com/th/id/OIP.I5XOh9o_kbTNsXnsIc53aAHaHa?pid=ImgDet&rs=1', 'https://manz.dev/assets/software/vitejs.png','https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_tailwind_icon_130128.png','https://images.ctfassets.net/1wryd5vd9xez/4PwY5sMapQmGSS7861OPga/a5aafc72fe1d0e0c3c714dc4986f9fde/https___cdn-images-1.medium.com_max_2000_1_kk8ovQKB-45FsZ8TZM-vjg.png','https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/themes/2152454423/settings_images/F1USRDEYRxObo2cGd3kZ_expressjs-logo.png',],
+      githubLink: 'https://github.com/DiegoRojasGonzalez/DevJobs-Chile',
+      applink: 'https://diegorojasgonzalez.github.io/DevJobs-Chile/',
+    },
     {
       image: 'https://raw.githubusercontent.com/DiegoRojasGonzalez/Resources/main/ss-task-wise-light.png',
       gif: 'https://raw.githubusercontent.com/DiegoRojasGonzalez/Resources/main/ss-task-wise-light.png',
@@ -38,6 +48,15 @@ export class ProjectsComponent implements OnInit {
       applink: '',
     },
     {
+      image: 'https://raw.githubusercontent.com/DiegoRojasGonzalez/Resources/main/ss-time-zone.png',
+      gif: 'https://raw.githubusercontent.com/DiegoRojasGonzalez/Resources/main/ss-time-zone.png',
+      title: 'Time-Zone',
+      description:'Time-Zone is your solution for quickly and easily checking the current time on your Android device. This Kotlin-based application displays the time in a large and easy-to-read format, automatically adjusting to your devices time zone format.',
+      technologies: ['https://img.icons8.com/?size=512&id=P2AnGyiJxMpp&format=png','https://img.icons8.com/?size=512&id=ZoxjA0jZDdFZ&format=png'],
+      githubLink: 'https://github.com/DiegoRojasGonzalez/Time-Zone',
+      applink: 'https://github.com/DiegoRojasGonzalez/Time-Zone',
+    },
+    {
       image: 'https://raw.githubusercontent.com/DiegoRojasGonzalez/Resources/main/ss-white-space.png',
       gif: 'https://raw.githubusercontent.com/DiegoRojasGonzalez/Resources/main/ss-white-space.png',
       title: 'White Space',
@@ -45,7 +64,8 @@ export class ProjectsComponent implements OnInit {
       technologies: ['https://img.icons8.com/?size=512&id=108784&format=png','https://img.icons8.com/?size=512&id=rY6agKizO9eb&format=png'],
       githubLink: 'https://github.com/DiegoRojasGonzalez/White-Space',
       applink: 'https://diegorojasgonzalez.github.io/White-Space/',
-    }
+    },
+
   ];
   currentElement = 0;
   hoverVideo = false; 

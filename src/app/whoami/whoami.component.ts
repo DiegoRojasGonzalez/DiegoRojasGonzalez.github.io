@@ -9,10 +9,10 @@ export class WhoamiComponent {
   
   experienceItems: ExperienceItem[] = [
     { position: 'Software Developer', 
-      enterprise: 'Badwolfrecords', 
-      date: 'February,2023 - July,2023',
-      worktype:'hibrid',
-      contracttype:'Internship'
+      enterprise: 'Freelancer', 
+      date: 'May,2023 - Actually',
+      worktype:'Fulltime',
+      contracttype:''
     }
 
   ];
