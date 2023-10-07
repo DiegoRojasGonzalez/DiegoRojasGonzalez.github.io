@@ -1,97 +1,134 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+* {
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
 }
 
 body {
-  margin: 0;
+
+  width: 100%;
+  height: 100%;
+  margin: 10px;
+}
+
+
+.grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  margin-top: 00px;
+
+}
+
+.gridL {
+  margin-top: 50px;
+  margin-left: 50px;
+}
+
+.gridR {
+  margin-right: 100px;
+
+}
+
+.profileImg {
+  width: 300px;
+  height: auto;
+  border-radius: 10.0% 70% 60% 70%;
+}
+
+.tittle,
+desc {
+  margin-left: 50px;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
+.tittle {
+  margin-top: 200px;
 }
 
-.card {
-  padding: 2em;
+.desc {
+  margin-top: 20px;
+  margin-left: 50px;
 }
 
-.read-the-docs {
-  color: #888;
+.name,
+.nameDesc {
+  font-weight: 100;
+  color: rgb(100, 100, 100);
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.name {
+  font-size: 40px;
+
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.nameDesc {
+  font-size: 20;
+  text-align: end;
+}
+
+.speciality {
+
+  font-weight: 600;
+  font-size: 80px;
+  color: #005eff;
+}
+
+.rss {
+  margin-left: 50px;
+
+}
+
+
+.textDesc {
+  color: rgb(80, 80, 80);
+  margin-top: 50px;
+  text-align: start;
+  width: 70%;
+}
+
+.textData {
+  color: rgb(80, 80, 80);
+  font-size: 20;
+}
+a{
+  text-decoration: none;
+}
+
+a:visited{
+  color: rgb(100, 100, 100);
+  text-decoration: none;
+}
+
+a:hover{
+  color: white;
+  background-color: #005eff;
+}
+
+.galery{
+  display: grid;
+  margin-right: 400px;
+  grid-template-columns: auto auto auto auto auto auto auto ;
+}
+.item{
+  font-size: 50px;
+}
+
+.item:hover{
+  transition: all 0.5s;
+  color: #005eff ;
+}
+
+
+.links{
+  font-size: 40px;
+}
+
+.a:visited{
+  text-decoration: none;
+  color: 80,80,80;
 }
