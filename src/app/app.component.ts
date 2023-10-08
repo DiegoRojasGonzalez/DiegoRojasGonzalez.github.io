@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit, ElementRef,  Renderer2 } from '@angular/core';
 import { Howl } from 'howler';
 
 @Component({
@@ -12,6 +12,7 @@ export class AppComponent implements OnInit {
   private sectionIndex: number = -1; // Inicializamos con un valor fuera de rango
   private screenWidth: number = window.innerWidth;
   private screenHeight: number = window.innerHeight;
+  constructor(private renderer: Renderer2, private el: ElementRef) {}
 
   ngOnInit(): void {
     this.tracks.push(new Howl({ src: ['assets/sound/sound.mp3'], loop: true, volume: 0 }));
@@ -20,6 +21,10 @@ export class AppComponent implements OnInit {
     this.tracks.push(new Howl({ src: ['assets/sound/soundllowpass.mp3'], loop: true, volume: 0 }));
 
     this.tracks.forEach(track => track.play());
+    const closeButton = this.el.nativeElement.querySelector('.close-button');
+    closeButton.addEventListener('click', () => {
+      this.hideAnnouncements();
+    });
   }
 
   @HostListener('document:mousemove', ['$event'])
@@ -56,4 +61,14 @@ export class AppComponent implements OnInit {
       });
     }
   }
+
+  hideAnnouncements(): void {
+    const announcements = this.el.nativeElement.querySelector('#announcements');
+
+    if (announcements) {
+        this.renderer.setStyle(announcements, 'display', 'none');
+    }
+}
+
+
 }
