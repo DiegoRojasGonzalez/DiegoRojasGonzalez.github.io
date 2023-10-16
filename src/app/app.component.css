@@ -69,8 +69,9 @@
 }
 
 .musiccontroller-button{
-    width: 20px;
     height: 20px;
+    width: 20px;
+    border-radius: 0;
 }
 
 .announcements{
@@ -109,4 +110,23 @@
     justify-content: center;
     align-items: center;
     margin-left: 10px;
+}
+
+@media only screen and (max-width: 1020px) {
+    .container {
+        display: flex;
+    }
+        
+    .terminal-container {
+        width: 98%;
+        margin: 0;
+        height: 100%;
+
+    }
+    .announcements{
+        width: 98%;
+        margin: 0;
+    }
+
+    
 }

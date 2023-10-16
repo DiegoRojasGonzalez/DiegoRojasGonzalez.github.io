@@ -53,3 +53,23 @@
     font-size: 15px;
     margin-left: 30px;
 }
+
+@media only screen and (max-width: 1020px) {
+    .tittle-box{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        font-size: 15px;
+    }
+    .whoami-content{
+        display: flex;
+        flex-direction: column;
+        align-items: star;
+        justify-content: center;
+        width: 100%;
+        margin-left: 0px;
+        
+    }
+    
+}

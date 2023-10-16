@@ -39,7 +39,7 @@ export class AppComponent implements OnInit {
 
       for (let i = 0; i < this.tracks.length; i++) {
         if (i === this.sectionIndex) {
-          this.tracks[i].volume(0.5); 
+          this.tracks[i].volume(0.1); 
         } else {
           this.tracks[i].volume(0); 
         }
@@ -54,7 +54,7 @@ export class AppComponent implements OnInit {
     } else {
       this.tracks.forEach((track, i) => {
         if (i === this.sectionIndex) {
-          track.volume(0.5);
+          track.volume(0.1);
         } else {
           track.volume(0);
         }

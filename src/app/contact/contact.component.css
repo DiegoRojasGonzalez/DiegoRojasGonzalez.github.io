@@ -38,3 +38,15 @@
     height: 100%;
     margin-left: 10px;
 }
+.contact-tittle-color {
+    color: black;
+    background-color: white;
+}
+@media only screen and (max-width: 1020px) {
+    .tittle-box{
+        width: 100%;
+    }
+    .container-button{
+        width: 100%;
+    }
+}

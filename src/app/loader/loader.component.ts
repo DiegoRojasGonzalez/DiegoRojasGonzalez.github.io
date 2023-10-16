@@ -47,7 +47,7 @@ export class LoaderComponent implements OnInit, OnDestroy {
 
         this.updateProgressBar();
 
-        if (this.loadingPercentage === 99) { 
+        if (this.loadingPercentage === 9) { 
           setTimeout(() => {
             this.hideLoader();
           }, 500);

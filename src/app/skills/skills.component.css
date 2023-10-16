@@ -48,8 +48,7 @@
     transition: opacity 0.3s ease;
     z-index: 1;
     bottom: 0;
-    left: 50%;
-    transform: translateX(30%);
+    right: 50%;
 }
 
 .skills-item:hover .skills-label {
@@ -63,4 +62,14 @@
     justify-content: center;
     width: 700px;
     font-size: 15px;
+}
+
+@media only screen and (max-width: 1020px) {
+    .tittle-box{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        font-size: 15px;
+    }
 }

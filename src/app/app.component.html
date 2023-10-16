@@ -14,17 +14,14 @@
             <div class="terminal-title">
                 diegorojas@diegorojas:~
             </div>
-            <div >
-                <button class="terminal-button">?</button>
-                <button class="terminal-button">x</button>
+            <div class="buttonsIcon">
+                <button (click)="buttonClick()" class="terminal-button">{{ isMuted ? 'Music Off' : 'Music On' }}</button>
+                <button class=" terminal-button">?</button>
+                <button class=" terminal-button">X</button>
+
             </div>
         </div>
         <app-menu></app-menu>
 
     </div>
 </section>
-<div class="terminal-musiccontroller"> 
-<button (click)="buttonClick()" class="soundcontroller">
-    <img class="musiccontroller-button" [src]="isMuted ? 'https://raw.githubusercontent.com/DiegoRojasGonzalez/Resources/14c934729dd2e4d4514f67270c8477dc0976b257/DiegoRojasGonzalez.github.io/volumeoff.svg' : 'https://raw.githubusercontent.com/DiegoRojasGonzalez/Resources/14c934729dd2e4d4514f67270c8477dc0976b257/DiegoRojasGonzalez.github.io/volumeon.svg'" alt="Volume Icon">
-  </button>
-</div>
