@@ -1,27 +1,47 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+import Badge from "@/components/Badge.astro";
 import SectionContainer from "@/components/SectionContainer.astro";
 const { frontmatter } = Astro.props;
 ---
 
-<Layout title="Portfolio" description="Diego Rojas Gonzalez Software Engineer">
+<Layout title={frontmatter.title} description={frontmatter.description}>
   <main class="px-4">
     <SectionContainer class="py-16 md:py-36">
-      <h1 class="mt-4 text-xl font-bold text-yellow-400">
+      <h1 class="mt-4 text-3xl font-semibold text-yellow-400 md:text-5xl">
         {frontmatter.title}
       </h1>
-      <p
-        class="mt-2 line-clamp-3 text-sm/relaxed text-gray-600 dark:text-gray-300"
-      >
-        Written on
+      <div class="flex justify-between">
+        <p class="mt-4 text-md text-gray-700 dark:text-gray-300">
+          Written on
+          {
+            `${frontmatter.date.day} / ${frontmatter.date.month} / ${frontmatter.date.year}`
+          }
+        </p>
+
+        <p class="mt-4 text-md text-gray-700 dark:text-gray-300">
+          Read time {frontmatter.readingTime} minutes
+        </p>
+      </div>
+      <div class="flex items-start gap-4 mt-4">
         {
-          `${frontmatter.date.day} - ${frontmatter.date.month} - ${frontmatter.date.year}`
+          frontmatter.tags && frontmatter.tags.length > 0 ? (
+            frontmatter.tags.map((tag: string) => (
+              <Badge key={tag}>{tag}</Badge>
+            ))
+          ) : (
+            <p class="text-gray-500">No tags available</p>
+          )
         }
+      </div>
+
+      <p class="mt-4 mb-4 text-lg text-gray-700 dark:text-gray-300">
+        {frontmatter.description}
       </p>
 
-      <p class="my-8">{frontmatter.description}</p>
-
-      <slot />
+      <div class="prose dark:prose-invert">
+        <slot class="text-gray-700 dark:text-gray-300" />
+      </div>
     </SectionContainer>
   </main>
 </Layout>

@@ -11,6 +11,7 @@ interface Post {
     title: string;
     date: DateInfo;
     description: string;
+    readingTime: number;
   };
 }
 
@@ -21,14 +22,21 @@ const posts = Object.values(
 
 {
   posts.map((post) => (
-    <article class="overflow-hidden rounded-lg transition  mt-4 dark:shadow-yellow-400 hover:shadow-lg ">
+    <article class="overflow-hidden rounded-lg transition  mt-4 ">
       <div class="p-4 sm:p-6">
-        <time
-          datetime={`${post.frontmatter.date.year}-${post.frontmatter.date.month}-${post.frontmatter.date.day}`}
-          class="block text-xs text-gray-600/80 dark:text-white/80"
-        >
-          {`${post.frontmatter.date.day} - ${post.frontmatter.date.month} - ${post.frontmatter.date.year}`}
-        </time>
+        <div class="flex justify-between gap-2">
+          <time
+            datetime={`${post.frontmatter.date.year}-${post.frontmatter.date.month}-${post.frontmatter.date.day}`}
+            class="block text-xs text-gray-600/80 dark:text-white/80"
+          >
+            {`${post.frontmatter.date.day} - ${post.frontmatter.date.month} - ${post.frontmatter.date.year}`}
+          </time>
+
+          <p class="text-xs text-gray-600/80 dark:text-white/80">
+            {post.frontmatter.readingTime} min read
+          </p>
+        </div>
+
         <a href={post.url}>
           <h3 class="text-xl font-bold text-yellow-400 dark:text-yellow-300">
             {post.frontmatter.title}
