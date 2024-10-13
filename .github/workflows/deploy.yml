@@ -1,0 +1,54 @@
+name: Deploy to Production
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the main branch
+        uses: actions/checkout@v2
+        with:
+          ref: main
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "22"
+
+      - name: Install pnpm
+        run: |
+          npm install -g pnpm
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build the project
+        run: pnpm run build
+
+      - name: Checkout the production branch
+        uses: actions/checkout@v2
+        with:
+          ref: production
+          path: production
+
+      - name: Remove old files from production
+        run: |
+          rm -rf production/*
+
+      - name: Copy new files to production
+        run: |
+          cp -r dist/* production/
+
+      - name: Commit and push changes to production
+        run: |
+          cd production
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add .
+          git commit -m "Deploy to production" || echo "No changes to commit"
+          git push origin production
