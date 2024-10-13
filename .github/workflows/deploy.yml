@@ -18,7 +18,7 @@ jobs:
         uses: actions/checkout@v4
       - name: Install, build, and upload your site
         uses: withastro/action@v3
-        node-version: 20 # La versión específica de Node que debería usarse para construir tu sitio. Por defecto es 20. (opcional)
+        node-version: 20
         package-manager: pnpm@latest
 
   deploy:
