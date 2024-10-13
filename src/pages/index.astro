@@ -6,22 +6,19 @@ import Briefcase from "@/components/icons/Briefcase.astro";
 import CodeIcon from "@/components/icons/Code.astro";
 import Experience from "@/components/Experience.astro";
 import ProfileCheck from "@/components/icons/ProfileCheck.astro";
-import Projects from "@/components/Projects.astro";
+import Blogs from "@/components/Blogs.astro";
 import SectionContainer from "@/components/SectionContainer.astro";
 import Hero from "@/components/Hero.astro";
 ---
 
-<Layout
-  title="Portfolio"
-  description="Diego Rojas Gonzalez Software Engineer"
->
+<Layout title="Portfolio" description="Diego Rojas Gonzalez Software Engineer">
   <main class="px-4">
     <SectionContainer class="py-16 md:py-36">
       <Hero />
     </SectionContainer>
   </main>
   <div class="space-y-24">
-    <SectionContainer id="experiencia">
+    <SectionContainer id="experience">
       <h2
         class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
       >
@@ -30,21 +27,21 @@ import Hero from "@/components/Hero.astro";
       </h2>
       <Experience />
     </SectionContainer>
-    <!-- 
-    <SectionContainer id="proyectos">
+
+    <!--
+    <SectionContainer id="blogs">
       <h2
         class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
       >
         <CodeIcon class="size-7" />
-        Proyectos
+        Last posts
       </h2>
-      
-        <Projects />
-       
-    </SectionContainer>
-    -->
 
-    <SectionContainer id="sobre-mi">
+      <Blogs />
+    </SectionContainer>
+    --->
+
+    <SectionContainer id="about-me">
       <h2
         class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-black/80 dark:text-white"
       >
@@ -55,3 +52,5 @@ import Hero from "@/components/Hero.astro";
     </SectionContainer>
   </div>
 </Layout>
+-->
+
