@@ -1,5 +1,44 @@
 ---
+interface DateInfo {
+  day: number;
+  month: string;
+  year: number;
+}
 
+interface Post {
+  url: string;
+  frontmatter: {
+    title: string;
+    date: DateInfo;
+    description: string;
+  };
+}
+
+const posts = Object.values(
+  await import.meta.glob<Post>("../pages/posts/*.md", { eager: true })
+) as Post[];
 ---
 
-<div class="flex flex-col gap-y-16">some blogs list</div>
+{
+  posts.map((post) => (
+    <article class="overflow-hidden rounded-lg transition  mt-4 dark:shadow-yellow-400 hover:shadow-lg ">
+      <div class="p-4 sm:p-6">
+        <time
+          datetime={`${post.frontmatter.date.year}-${post.frontmatter.date.month}-${post.frontmatter.date.day}`}
+          class="block text-xs text-gray-600/80 dark:text-white/80"
+        >
+          {`${post.frontmatter.date.day} - ${post.frontmatter.date.month} - ${post.frontmatter.date.year}`}
+        </time>
+        <a href={post.url}>
+          <h3 class="text-xl font-bold text-yellow-400 dark:text-yellow-300">
+            {post.frontmatter.title}
+          </h3>
+        </a>
+
+        <p class="mt-2 line-clamp-3 text-sm/relaxed text-gray-600 dark:text-gray-300">
+          {post.frontmatter.description}
+        </p>
+      </div>
+    </article>
+  ))
+}

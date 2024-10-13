@@ -1,0 +1,31 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import SectionContainer from "@/components/SectionContainer.astro";
+import Header from "@/components/Header.astro";
+import ExperienceItem from "@/components/ExperienceItem.astro";
+const { frontmatter } = Astro.props;
+---
+
+<Header />
+
+<Layout title="Portfolio" description="Diego Rojas Gonzalez Software Engineer">
+  <main class="px-4">
+    <SectionContainer class="py-16 md:py-36">
+      <h1 class="mt-4 text-xl font-bold text-yellow-400">
+        {frontmatter.title}
+      </h1>
+      <p
+        class="mt-2 line-clamp-3 text-sm/relaxed text-gray-600 dark:text-gray-300"
+      >
+        Written on
+        {
+          `${frontmatter.date.day} - ${frontmatter.date.month} - ${frontmatter.date.year}`
+        }
+      </p>
+
+      <p class="my-8">{frontmatter.description}</p>
+
+      <slot />
+    </SectionContainer>
+  </main>
+</Layout>
