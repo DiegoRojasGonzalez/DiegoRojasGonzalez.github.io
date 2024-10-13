@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://diegorojasgonzalez.github.io/sitemap-index.xml
