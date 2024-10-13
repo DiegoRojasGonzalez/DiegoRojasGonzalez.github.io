@@ -1,54 +1,33 @@
-name: Deploy to Production
+name: Deploy to GitHub Pages
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout the main branch
-        uses: actions/checkout@v2
-        with:
-          ref: main
+      - name: Checkout your repository using git
+        uses: actions/checkout@v4
+      - name: Install, build, and upload your site
+        uses: withastro/action@v3
+        node-version: 20 # La versión específica de Node que debería usarse para construir tu sitio. Por defecto es 20. (opcional)
+        package-manager: pnpm@latest
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: "22"
-
-      - name: Install pnpm
-        run: |
-          npm install -g pnpm
-
-      - name: Install dependencies
-        run: pnpm install
-
-      - name: Build the project
-        run: pnpm run build
-
-      - name: Checkout the production branch
-        uses: actions/checkout@v2
-        with:
-          ref: production
-          path: production
-
-      - name: Remove old files from production
-        run: |
-          rm -rf production/*
-
-      - name: Copy new files to production
-        run: |
-          cp -r dist/* production/
-
-      - name: Commit and push changes to production
-        run: |
-          cd production
-          git config user.name "GitHub Actions"
-          git config user.email "actions@github.com"
-          git add .
-          git commit -m "Deploy to production" || echo "No changes to commit"
-          git push origin production
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
