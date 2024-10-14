@@ -1,51 +1,54 @@
-name: Deploy to GitHub Pages
+name: Deploy to Production
 
 on:
   push:
-    branches: [main]
-  workflow_dispatch:
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+    branches:
+      - main
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
-    steps:
-      - name: Checkout your repository using git
-        uses: actions/checkout@v4
 
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v2
+    steps:
+      - name: Checkout the main branch
+        uses: actions/checkout@v2
         with:
-          version: 8
+          ref: main
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "22"
+
+      - name: Install pnpm
+        run: |
+          npm install -g pnpm
 
       - name: Install dependencies
         run: pnpm install
 
       - name: Build the project
-        run: pnpm build
+        run: pnpm run build
 
-      - name: Upload build artifacts
-        uses: actions/upload-artifact@v4
+      - name: Checkout the production branch
+        uses: actions/checkout@v2
         with:
-          name: github-pages
-          path: ./dist
+          ref: production
+          path: production
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Download build artifacts
-        uses: actions/download-artifact@v4
-        with:
-          name: github-pages
+      - name: Remove old files from production
+        run: |
+          rm -rf production/*
 
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Copy new files to production
+        run: |
+          cp -r dist/* production/
+
+      - name: Commit and push changes to production
+        run: |
+          cd production
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add .
+          git commit -m "Deploy to production" || echo "No changes to commit"
+          git push origin production
